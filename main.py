@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, url_for, flash, request, ses
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
 from datetime import date
+from dotenv import load_dotenv
 from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from requests import HTTPError
@@ -18,6 +19,7 @@ from wtforms import StringField, SubmitField, FloatField, PasswordField, TextAre
 from wtforms.validators import DataRequired, NumberRange
 from functools import wraps
 import os
+load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 ckeditor = CKEditor(app)
