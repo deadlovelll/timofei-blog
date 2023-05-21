@@ -18,7 +18,6 @@ from wtforms import StringField, SubmitField, FloatField, PasswordField, TextAre
 from wtforms.validators import DataRequired, NumberRange
 from functools import wraps
 import os
-import html
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 ckeditor = CKEditor(app)
