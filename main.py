@@ -19,13 +19,14 @@ from wtforms.validators import DataRequired, NumberRange
 from functools import wraps
 import os
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 print(os.getenv("SECRET_KEY"))
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgre_database_website_user:oVKAy7sfSQryxh20hB0WK57bjDUpOdp3@dpg-chkvndbhp8uej70ll8l0-a/postgre_database_website"
+
 print(os.environ.get("DATABASE_URL"))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
